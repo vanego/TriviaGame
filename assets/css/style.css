@@ -1,3 +1,19 @@
 .yellow{
 	color: yellow;
 }
+
+#background{
+	background-image: url(https://wallpapercave.com/wp/5Hl724N.jpg);
+	background-repeat: no-repeat;
+	/*background-position: center;*/
+}
+
+#countdown{
+	border: #000 3px solid;
+	padding: 10px 40px 40px 40px;
+}
+
+#test{
+	border: #000 3px solid;
+	padding: 
+}
