@@ -5,15 +5,25 @@
 #background{
 	background-image: url(https://wallpapercave.com/wp/5Hl724N.jpg);
 	background-repeat: no-repeat;
-	/*background-position: center;*/
 }
 
 #countdown{
-	border: #000 3px solid;
-	padding: 10px 40px 40px 40px;
+	padding: 25px 40px 25px 40px;
+	margin-right: 100px;
+	margin-left: 100px;
+	text-align:center;
+	background-color: white;
+	opacity: 0.75;
 }
 
-#test{
-	border: #000 3px solid;
-	padding: 
+#questions{
+	background-color: white;
+	margin: 20px 100px 20px 100px;
+	padding: 200px, 100px, 200px, 100px;
+	opacity:.75;
+	
+}
+
+#submit{
+	margin-left:600px;
 }
