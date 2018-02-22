@@ -1,5 +1,5 @@
 // counter
-var counter = 10;
+var counter = 60;
 var unansweredQuestions = 0;
 var correctAnswers = 0;
 var incorrectAnswers = 0;
@@ -13,7 +13,7 @@ function countDown() {
 
     // when counter reaches 0 it alerts "time's up" and stops counter
     if (counter == 0) {
-        console.log("Time's up!");
+        alert("Time's up!");
         grade();
         clearInterval(intervalIdentifier);
     }
@@ -84,16 +84,16 @@ for (var i = 0; i < test.length; i++) {
     }
     
 }
-
+// when "submit" button is clicked it runs the function to grade the test.
 $("#submit").on("click", function(){
     grade();
 })
-
+ 
 function grade(){
     for (var i = 0; i < test.length; i++) {
         var selectedOption = $("input[name=" + i + "]:checked");
         
-        // if nothing was selected then increase the unanswered counter
+        // if nothing was selected for each object then it increases the unanswered counter
         if (selectedOption.length === 0 ) {
             unansweredQuestions++;
 
@@ -109,35 +109,11 @@ function grade(){
             }
         }
     } 
-    console.log("unansweredQuestions " + unansweredQuestions);
-    console.log("correctAnswers " + correctAnswers);
-    console.log("incorrectAnswers " + incorrectAnswers);
+    alert("unansweredQuestions " + unansweredQuestions);
+    alert("correctAnswers " + correctAnswers);
+    alert("incorrectAnswers " + incorrectAnswers);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
