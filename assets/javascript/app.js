@@ -109,10 +109,15 @@ function grade(){
             }
         }
     } 
-    alert("unansweredQuestions " + unansweredQuestions);
+    // alert("unansweredQuestions " + unansweredQuestions);
     alert("correctAnswers " + correctAnswers);
+
     alert("incorrectAnswers " + incorrectAnswers);
 
+    // created a variable that combines he unanswered questions and the incorrectly answered questions.
+
+    var wrongTotal= (unansweredQuestions + incorrectAnswers);
+        alert("wrongTotal");
 }
 
 
