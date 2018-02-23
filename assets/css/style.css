@@ -24,6 +24,9 @@
 	
 }
 
-#submit{
-	margin-left:600px;
+#submit{	
+	margin:0 auto;
 }
+
+.button{
+	text-align: center;

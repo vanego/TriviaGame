@@ -14,8 +14,8 @@ function countDown() {
     // when counter reaches 0 it alerts "time's up" and stops counter
     if (counter == 0) {
         alert("Time's up!");
-        grade();
         clearInterval(intervalIdentifier);
+        grade();
     }
 
     // shows my counter on html every time it changes (every 1 second)
@@ -77,7 +77,10 @@ for (var i = 0; i < test.length; i++) {
 
     // loop through options and append radio button input attr thing
     for (var j = 0; j < test[i].options.length; j++) {
+        // var inputThing = $("<input>").attr("type","radio").attr("name", i).attr("disabled", "disabled").attr("value", test[i].options[j]).attr("correctAnswer", test[i].answer);
+
         var inputThing = $("<input>").attr("type","radio").attr("name", i).attr("value", test[i].options[j]).attr("correctAnswer", test[i].answer);
+
         $("#questions").append(inputThing);
         $("#questions").append(test[i].options[j]);
         $("#questions").append("<br>");
@@ -86,7 +89,9 @@ for (var i = 0; i < test.length; i++) {
 }
 // when "submit" button is clicked it runs the function to grade the test.
 $("#submit").on("click", function(){
+    clearInterval(intervalIdentifier);
     grade();
+
 })
  
 function grade(){
@@ -116,8 +121,12 @@ function grade(){
 
     // created a variable that combines he unanswered questions and the incorrectly answered questions.
 
-    var wrongTotal= (unansweredQuestions + incorrectAnswers);
-        alert("wrongTotal");
+    var unansweredQuestions = (test.length - correctAnswers - incorrectAnswers);
+        alert(unansweredQuestions);
+
+        // 1. figure out how to alert in my html
+        // 2. figure out how to stop timer once submit button is clicked.
+        
 }
 
 
